@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Zetsuki/node-pokemon_api/issues"
   },
-  "homepage": "https://github.com/Zetsuki/node-pokemon_api#readme"
+  "homepage": "https://github.com/Zetsuki/node-pokemon_api#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }

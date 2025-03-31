@@ -1,0 +1,19 @@
+{
+  "name": "node-pokemon-api",
+  "version": "1.0.0",
+  "description": "Rest API to handle pokemons",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zetsuki/node-pokemon_api.git"
+  },
+  "author": "Zetsuki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zetsuki/node-pokemon_api/issues"
+  },
+  "homepage": "https://github.com/Zetsuki/node-pokemon_api#readme"
+}

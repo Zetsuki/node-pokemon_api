@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Zetsuki/node-pokemon_api#readme",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "express": "^4.21.2",
     "serve-favicon": "^2.5.0"
   },

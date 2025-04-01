@@ -2,11 +2,30 @@ const express = require('express')
 const favicon = require('serve-favicon')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const { Sequelize } = require('sequelize')
 const { success, getUniqueId } = require('./helper')
 let pokemons = require('./mock-pokemon')
 
 const app = express()
 const port = 3000
+
+const sequelize = new Sequelize(
+    'pokedex',
+    'root',
+    '',
+    {
+        host: 'localhost',
+        dialect: 'mariadb',
+        dialectOptions: {
+            timezone: 'Etc/GMT-2'
+        },
+        logging: false
+    }
+)
+
+sequelize.authenticate()
+    .then(_ => console.log('La connexion a la DB a bien été établie.'))
+    .catch(error => console.error(`Impossible de se connecter à la DB ${error}`))
 
 app
     .use(favicon(__dirname + '/favicon.ico'))

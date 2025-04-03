@@ -14,10 +14,17 @@ app
 
 sequelize.initDb()
 
+// Terminaisons
 require('./src/routes/findAllPokemons')(app)
 require('./src/routes/findPokemonByPk')(app)
 require('./src/routes/createPokemon')(app)
 require('./src/routes/updatePokemon')(app)
 require('./src/routes/deletePokemon')(app)
+
+// Gestion d'erreurs
+app.use(({res}) => {
+    const message = 'Impossible de trouver la ressource demandée.'
+    res.status(404).json({message})
+}) 
 
 app.listen(port, () => console.log(`Node app started on : http://localhost:${port}`))

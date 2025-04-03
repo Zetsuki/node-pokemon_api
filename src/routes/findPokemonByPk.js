@@ -7,5 +7,9 @@ module.exports = (app) => {
         const message = 'Un pokémon a bien été trouvé.'
         res.json({ message, data: pokemon })
       })
+      .catch(error => {
+        const message = 'Le pokémon n\'a pas pu être récupéré. Réessayez dans quelques instants.'
+        res.status(500).json({message, data: error})
+      })
   })
 }

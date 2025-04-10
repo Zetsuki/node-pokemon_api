@@ -9,7 +9,7 @@ module.exports = (app) => {
 
       if(name.length < 2) {
         const message = 'Le terme de recherche doit contenir au moins 2 caractères.'
-        res.status(400).json({ message })
+        return res.status(400).json({ message })
       }
 
       return Pokemon.findAndCountAll({ 

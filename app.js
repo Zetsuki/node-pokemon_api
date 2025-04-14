@@ -20,11 +20,11 @@ require('./src/routes/findPokemonByPk')(app)
 require('./src/routes/createPokemon')(app)
 require('./src/routes/updatePokemon')(app)
 require('./src/routes/deletePokemon')(app)
+require('./src/routes/login')(app)
 
 // Gestion d'erreurs
-app.use(({res}) => {
+app.use((req, res) => {
     const message = 'Impossible de trouver la ressource demandée.'
-    res.status(404).json({message})
-}) 
-
+    res.status(404).json({ message })
+})
 app.listen(port, () => console.log(`Node app started on : http://localhost:${port}`))

@@ -7,8 +7,8 @@ const pokemons = require('./mock-pokemon')
 let sequelize
 
 if(process.env.NODE_ENV === 'production') {
-  sequelize = new Sequelize('kk8u5y871hfoaw9y', 't09tvm6qofrtvc7h', 'ryujse9ftf40wpqn', {
-    host: 'klbcedmmqp7w17ik.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  sequelize = new Sequelize('oz7k0rdsb92e2g5q', 'ku31en8yqw3jeftw', 'gtklrceln4i92bj0', {
+    host: 'h7xe2knj2qb6kxal.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
     dialect: 'mariadb',
     dialectOptions: {
       timezone: 'Etc/GMT-2',
@@ -16,8 +16,8 @@ if(process.env.NODE_ENV === 'production') {
     logging: true
   })
 } else {
-  sequelize = new Sequelize('pokedex', 'username', 'password', {
-    host: '192.168.64.2',
+  sequelize = new Sequelize('pokedex', 'root', '', {
+    host: 'localhost',
     dialect: 'mariadb',
     dialectOptions: {
       timezone: 'Etc/GMT-2',

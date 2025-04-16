@@ -28,13 +28,8 @@ const initDb = () => {
       }).then(pokemon => console.log(pokemon.toJSON()))
     })
 
-    bcrypt.hash('Pikachu', 10)
-    .then(hash => {
-      return User.create({
-        username: 'pikachu',
-        password: hash
-      })
-    })
+    bcrypt.hash('pikachu', 10)
+    .then(hash => User.create({ username: 'pikachu', password: hash }))
     .then(user => console.log(user.toJSON()))
 
     console.log('La base de données a bien été initialisée !')

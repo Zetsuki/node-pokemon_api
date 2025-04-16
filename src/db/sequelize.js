@@ -16,7 +16,7 @@ if(process.env.NODE_ENV === 'production') {
     logging: true
   })
 } else {
-  sequelize = new Sequelize('pokedex', 'username', 'password', {
+  sequelize = new Sequelize('pokedex', 'root', '', {
     host: 'localhost',
     dialect: 'mariadb',
     dialectOptions: {
